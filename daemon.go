@@ -32,6 +32,11 @@ type DaemonAttr struct {
 	Files         []**os.File // files to keep open in the daemon
 }
 
+// 支持导入即后台运行
+func init() {
+	MakeDaemon(&DaemonAttr{})
+}
+
 /*
 MakeDaemon turns the process into a daemon. But given the lack of Go's
 support for fork(), MakeDaemon() is forced to run the process all over again,

@@ -36,6 +36,10 @@ func main() {
 	godaemon.MakeDaemon(&godaemon.DaemonAttr{})
 }
 ```
+```
+将godaemon.MakeDaemon(&godaemon.DaemonAttr{})添加到了init函数，导入包即可
+_ "github.com/VividCortex/godaemon"
+```
 
 Use the `CaptureOutput` attribute if you need to capture your program's
 standard output and standard error streams. In that case, the function returns
