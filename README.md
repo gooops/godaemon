@@ -37,8 +37,11 @@ func main() {
 }
 ```
 ```
-将godaemon.MakeDaemon(&godaemon.DaemonAttr{})添加到了init函数，导入包即可
-_ "github.com/VividCortex/godaemon"
+将  godaemon.MakeDaemon(&godaemon.DaemonAttr{})   添加到了init函数，
+导入包即可，如下：
+import (
+	_ "github.com/gooops/godaemon"
+)
 ```
 
 Use the `CaptureOutput` attribute if you need to capture your program's
